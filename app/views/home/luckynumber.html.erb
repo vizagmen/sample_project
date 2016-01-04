@@ -1,0 +1,73 @@
+<h1>LuckyNumbers#luckynumber</h1>
+<p>Find me in app/views/lucky_numbers/luckynumber.html.erb</p>
+
+<%= link_to "Relationships", relationships_index_path %>
+
+
+
+<div class="container well">
+<%= form_tag lucky_numbers_luckynumber_path,remote: true do %>
+  
+
+  <%= label_tag 'Name'%>
+  <%= text_field_tag 'name'%>
+  </br>
+
+
+
+  <%= label_tag 'Date of Birth'%>
+  <%= date_field("user", "born_on") %>
+  </br>
+  <!--<input id="user_born_on" name="user[born_on]" type="date" /> -->
+  <%= submit_tag 'find lucky_numbers', :class=> "btn btn-primary"%>
+<% end %>
+</div>
+<strong><div id="luckynum"></div></strong>
+
+
+
+
+<div class="container well">
+<%= form_tag lucky_numbers_cellnumbermatch_path,remote: true do %>
+  
+
+<%= label_tag 'Name'%>
+  <%= text_field_tag 'name'%>
+  </br>
+
+<%= label_tag 'Phone Number' %>
+<%= text_field_tag 'phno' %>
+</br>
+  <%= label_tag 'Date of Birth'%>
+  <%= date_field("user", "born_on") %>
+  </br>
+  <!--<input id="user_born_on" name="user[born_on]" type="date" /> -->
+  <%= submit_tag 'Phone Number Match', :class=> "btn btn-primary"%>
+<% end %>
+</div>
+<div id="cell"></div>
+
+
+
+
+
+
+<div class="container well">
+<%= form_tag favdates_getfavs_path,remote: true do %>
+  
+
+<%= label_tag 'Name'%>
+  <%= text_field_tag 'name'%>
+  </br>
+
+
+</br>
+  <%= label_tag 'Date of Birth'%>
+  <%= date_field("user", "born_on") %>
+  </br>
+  <!--<input id="user_born_on" name="user[born_on]" type="date" /> -->
+  <%= submit_tag 'Fav days', :class=> "btn btn-primary"%>
+<% end %>
+</div>
+
+<div id="fav"></div>

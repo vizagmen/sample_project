@@ -1,0 +1,65 @@
+<h1>Relationships#index</h1>
+<p>Find me in app/views/relationships/index.html.erb</p>
+
+
+<div class="container well">
+<%= form_tag relationships_friendship_path,remote: true do %>
+  
+
+<%= label_tag 'Enter Your Name'%>
+  <%= text_field_tag 'my_name'%>
+  </br>
+
+  <%= label_tag 'Enter Your Date of Birth'%>
+  <%= date_field("user", "born_on") %>
+  </br>
+
+ <%= label_tag "Enter Your Friend's name" %>
+ <%= text_field_tag 'friend_name' %>
+</br>
+
+<%= label_tag 'Enter friend Date of Birth'%>
+  <%= date_field("friend", "born_on") %>
+
+</br>
+  <!--<input id="user_born_on" name="user[born_on]" type="date" /> -->
+  <%= submit_tag 'Find out friendship', :class=> "btn btn-primary"%>
+<% end %>
+</div>
+
+<div id="percentage"> </div>
+
+
+
+
+<div class="container well">
+<%= form_tag relationships_digital_path,remote: true do %>
+  
+
+<%= label_tag 'Enter Person1 Name'%>
+  <%= text_field_tag 'my_name'%>
+  </br>
+
+  <%= label_tag 'Enter Person1 Date of Birth'%>
+  <%= date_field("user", "born_on") %>
+  </br>
+
+ <%= label_tag "Enter Your Person2 name" %>
+ <%= text_field_tag 'friend_name' %>
+</br>
+
+<%= label_tag 'Enter Person2 Date of Birth'%>
+  <%= date_field("friend", "born_on") %>
+
+</br>
+  <!--<input id="user_born_on" name="user[born_on]" type="date" /> -->
+  <%= submit_tag 'Find out Digital relationship', :class=> "btn btn-primary"%>
+<% end %>
+</div>
+
+<div id="digital"></div>
+
+
+
+
+
